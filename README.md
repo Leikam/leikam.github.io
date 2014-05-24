@@ -1,4 +1,4 @@
-pres-mobiles
-============
+mobiles
+=======
 
-Talk about mobile technologies on WSD 2014, Riga
+Presentation about mobile frontend technologies.
