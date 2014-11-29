@@ -1,0 +1,378 @@
+body {
+    font-size: 30px;
+    }
+
+#cover {
+
+    }
+
+    #cover h2 {
+        margin-top: 80px;
+        padding: .25em 0;
+        font-size: 75px;
+        text-align: center;
+        background-color: rgba(20, 20, 20, 0.75);
+        -webkit-filter: blur(5px);
+        -webkit-animation: unBlured .35s linear 4s forwards;
+        /*-webkit-transform: translate3d(0);*/
+        }
+
+    @-webkit-keyframes unBlured { to { -webkit-filter: blur(0); } }
+
+    #cover h2 span {
+        display: block;
+        margin-top: 15px;
+        font-size: 65px;
+
+        }
+
+    #cover .author {
+        width: 100%;
+        margin-top: 220px;
+        position: relative;
+
+        font-size: 1.4em;
+        text-align: center;
+        color: #fff;
+        }
+
+        #cover .author_tx {
+            position: absolute;
+            font-size: 23px;
+            left: 318px;
+            top: 11px;
+            background: #E97321;
+            padding: 0 10px;
+            color: #fff;
+            text-decoration: none;
+            border-bottom: none;
+            outline: none;
+            }
+
+    #cover .bl {
+        color: inherit !important;
+        border-bottom: none !important;
+        }
+
+    #cover .bl:hover {
+        border-bottom: solid 2px !important;
+        }
+
+    #cover .ok {
+        margin-top: 10px;
+        border-bottom: none;
+        }
+        #cover .ok img {
+            height: 65px;
+            border-radius: 10px;
+            }
+
+.overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: .6;
+    }
+
+#hail-node {
+
+    }
+
+    #hail-node h2 {
+        margin-top: -150px;
+        font-size: 130px;
+        }
+
+    #hail-node img {
+        margin-top: 80px;
+        width: 720px;
+        }
+
+
+#build {
+
+    }
+
+    #build h2 {
+        font-size: 100px;
+        padding: .5em 0;
+        margin-top: -20px;
+        background: rgba(255, 255, 255, .95);
+        }
+
+#grunt {
+    text-align: center;
+    font-size: 40px;
+    }
+
+#perf h2 {
+    font-size: 110px;
+    }
+
+.mobile .hide-for-mobile {
+	display: none !important;
+	}
+
+
+.headings {
+    font-size: 1.2em;
+    }
+
+.stroke-out {
+    text-decoration: line-through;
+    }
+
+.slide ul  ul {
+    font-size: .9em;
+    }
+
+
+.slide.cover img {
+    bottom: 0;
+    margin: auto;
+    }
+
+.cover {
+    text-align: center;
+    }
+
+
+/* Special links
+---------------------------------------------------------------------------------- */
+
+a[href*="github"] {
+    position: relative;
+    margin-right: 1.5em;
+    }
+a[href*="github"]:after {
+    content: '';
+    position: absolute;
+    height: 1em;
+    width: 1em;
+    margin: auto;
+    top: 0;
+    right: -1.25em;
+    bottom: 0;
+    background-image: url(../i/github.png);
+    background-size: 1em;
+    }
+
+/* /Special links
+---------------------------------------------------------------------------------- */
+
+
+
+/* Tick
+---------------------------------------------------------------------------------- */
+.next {
+    position: absolute;
+    z-index: -1;
+    }
+
+    .next.active {
+        position: static;
+        }
+
+
+/* /Tick
+---------------------------------------------------------------------------------- */
+
+
+
+/* Overrides
+---------------------------------------------------------------------------------- */
+.slide:after {
+    bottom: 50px;
+    }
+    .slide.intro:before {
+        content: none;
+        }
+    .slide.__slow:before {
+        background-image: url(../i/slowpok.png);
+        background-repeat: no-repeat;
+        -webkit-background-size: 200px;
+        background-size: 200px;
+        transform: rotate(45deg);
+        width: 210px;
+        height: 205px;
+        bottom: -10px;
+        right: -40px;
+        }
+
+    .ok-logo {
+        height: 100%;
+        width: 100%;
+        position: absolute !important;
+        top: 0; left: 0;
+        z-index: 1;
+        pointer-events: none;
+        }
+        .ok-logo.next {
+            visibility: visible !important;
+        }
+        .slide.intro .ok-logo:before {
+            content: '';
+            position: absolute;
+            z-index: 10;
+            right: 1px;
+            bottom: -25px;
+            width: 118px;
+            height: 200px;
+            background-image: url(../res/shower-ok/images/ok.svg);
+            background-size: cover;
+
+            -webkit-transition: translate .38s cubic-bezier(.34,-.31,.64,1.65) 0s;
+            transition: transform .38s cubic-bezier(.34,-.31,.64,1.65) 0s;
+
+            -webkit-transform: rotate(-45deg) translateY(195px);
+            -moz-transform: rotate(-45deg) translateY(195px);
+            transform: rotate(-45deg) translateY(195px);
+            }
+            .slide.intro .ok-logo.active:before {
+                -webkit-transform: rotate(-45deg) translateY(-25px);
+                -moz-transform: rotate(-45deg) translateY(-25px);
+                transform: rotate(-45deg) translateY(-25px);
+                }
+
+    .slide blockquote:before {
+        content: '';
+        margin-top: 55px;
+        }
+
+        .slide p {
+            padding-left: 20px;
+            margin-left: -20px;
+            border-left: 4px solid #ddd;
+            }
+
+        .slide blockquote + figcaption {
+            font-style: oblique;
+            font-weight: 400;
+            }
+
+    .full .progress {
+        bottom: 25px;
+        }
+
+.slide.cover img:not(.uncover),
+.slide.cover svg:not(.uncover),
+.slide.cover object:not(.uncover),
+.slide.cover video:not(.uncover),
+.slide.cover canvas:not(.uncover) {
+
+    }
+
+/* /Overrides
+---------------------------------------------------------------------------------- */
+
+
+
+/* Cosmetic
+---------------------------------------------------------------------------------- */
+
+.orange {
+    color: #E97518;
+    }
+
+.lgray {
+    color: #ddd;
+    }
+.lcoral {
+    color: lightcoral;
+    }
+
+iframe {
+    border: 2px solid #DFDFDF;
+    border-radius: 10px;
+    }
+
+    blockquote p {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        }
+
+.draft {
+    display: block;
+    background-color: #ededed;
+    color: rgb(255, 17, 59);
+    font-size: .85em;
+    padding: .5em .75em;
+    border: 1px solid;
+    text-indent: 0;
+    list-style: none;
+    }
+    .draft:after,
+    .draft:before {
+        content: '' !important;
+        }
+/* /Cosmetic
+---------------------------------------------------------------------------------- */
+
+
+/* Common slide
+---------------------------------------------------------------------------------- */
+
+.decor {
+    background-image: url(../i/desktopfirst.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    visibility: visible !important;
+    z-index: auto !important;
+    }
+
+    .decor.active {
+        position: relative !important;
+        }
+        /*.decor.active:after {*/
+            /*content: "OBEY";*/
+            /*position: absolute;*/
+            /*top: 57px;*/
+            /*right: 123px;*/
+
+            /*-webkit-transform: rotate(-90deg);*/
+            /*transform: rotate(-90deg);*/
+            /*font-size: .95em;*/
+            /*}*/
+
+    .decor_obey {
+        position: absolute;
+        top: 20px;
+        left: 595px;
+        width: 110px;
+        display: none;
+        }
+        .decor.active .decor_obey {
+            display: block;
+            }
+
+    .decor_arrow {
+        position: absolute;
+        top: 100px;
+        left: 365px;
+        }
+        .decor_arrow:last-child {
+            left: 565px;
+            }
+
+        .decor.active .decor_arrow {
+            -webkit-animation: RotateMe 1s ease forwards;
+            animation: RotateMe 1s ease forwards;
+            }
+
+@-webkit-keyframes RotateMe {
+    0% {
+        -webkit-transform: rotate(0deg);
+        }
+    100% {
+        -webkit-transform: rotate(-180deg);
+        }
+    }
+
+
+/* /Common slide
+---------------------------------------------------------------------------------- */
+

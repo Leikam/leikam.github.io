@@ -1,0 +1,5 @@
+/pictures
+/styles/*.scss
+.gitignore
+Gruntfile.js
+index.html
