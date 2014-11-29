@@ -418,7 +418,9 @@ a {
 .slide .place {
   position: absolute;
 }
-.slide .place.t, .slide .place.m, .slide .place.b {
+.slide .place.t,
+.slide .place.m,
+.slide .place.b {
   left: 50%;
   -webkit-transform: translateX(-50%);
   -moz-transform: translateX(-50%);
@@ -632,10 +634,19 @@ a {
   }
   .full .slide .next {
     visibility: hidden;
-  }
-  .full .slide .next.active {
-    visibility: visible;
-  }
+    }
+    .full .slide .next.__semi {
+      visibility: visible;
+      position: static;
+      opacity: .05;
+      transition: opacity .35s ease-in 0s;
+      }
+    .full .slide .next.active {
+      visibility: visible;
+      }
+      .full .slide .next.active.__semi {
+        opacity: 1;
+        }
   .full .slide:target {
     margin: 0;
   }

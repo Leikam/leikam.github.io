@@ -5,6 +5,7 @@ body {
 #cover {
 
     }
+
     #cover h2 {
         margin-top: 80px;
         padding: .25em 0;
@@ -42,6 +43,10 @@ body {
             top: 11px;
             background: #E97321;
             padding: 0 10px;
+            color: #fff;
+            text-decoration: none;
+            border-bottom: none;
+            outline: none;
             }
 
     #cover .bl {
@@ -177,11 +182,60 @@ a[href*="github"]:after {
 
 
 
-/* Overwrites
+/* Overrides
 ---------------------------------------------------------------------------------- */
 .slide:after {
     bottom: 50px;
     }
+    .slide.intro:before {
+        content: none;
+        }
+    .slide.__slow:before {
+        background-image: url(../i/slowpok.png);
+        background-repeat: no-repeat;
+        -webkit-background-size: 200px;
+        background-size: 200px;
+        transform: rotate(45deg);
+        width: 210px;
+        height: 205px;
+        bottom: -10px;
+        right: -40px;
+        }
+
+    .ok-logo {
+        height: 100%;
+        width: 100%;
+        position: absolute !important;
+        top: 0; left: 0;
+        z-index: 1;
+        pointer-events: none;
+        }
+        .ok-logo.next {
+            visibility: visible !important;
+        }
+        .slide.intro .ok-logo:before {
+            content: '';
+            position: absolute;
+            z-index: 10;
+            right: 1px;
+            bottom: -25px;
+            width: 118px;
+            height: 200px;
+            background-image: url(../res/shower-ok/images/ok.svg);
+            background-size: cover;
+
+            -webkit-transition: translate .38s cubic-bezier(.34,-.31,.64,1.65) 0s;
+            transition: transform .38s cubic-bezier(.34,-.31,.64,1.65) 0s;
+
+            -webkit-transform: rotate(-45deg) translateY(195px);
+            -moz-transform: rotate(-45deg) translateY(195px);
+            transform: rotate(-45deg) translateY(195px);
+            }
+            .slide.intro .ok-logo.active:before {
+                -webkit-transform: rotate(-45deg) translateY(-25px);
+                -moz-transform: rotate(-45deg) translateY(-25px);
+                transform: rotate(-45deg) translateY(-25px);
+                }
 
     .slide blockquote:before {
         content: '';
@@ -203,9 +257,15 @@ a[href*="github"]:after {
         bottom: 25px;
         }
 
-.slide.cover img:not(.uncover), .slide.cover svg:not(.uncover), .slide.cover object:not(.uncover), .slide.cover video:not(.uncover), .slide.cover canvas:not(.uncover)
+.slide.cover img:not(.uncover),
+.slide.cover svg:not(.uncover),
+.slide.cover object:not(.uncover),
+.slide.cover video:not(.uncover),
+.slide.cover canvas:not(.uncover) {
 
-/* /Overwrites
+    }
+
+/* /Overrides
 ---------------------------------------------------------------------------------- */
 
 
@@ -219,7 +279,9 @@ a[href*="github"]:after {
 
 .lgray {
     color: #ddd;
-
+    }
+.lcoral {
+    color: lightcoral;
     }
 
 iframe {
@@ -231,5 +293,86 @@ iframe {
         padding-top: 5px;
         padding-bottom: 5px;
         }
+
+.draft {
+    display: block;
+    background-color: #ededed;
+    color: rgb(255, 17, 59);
+    font-size: .85em;
+    padding: .5em .75em;
+    border: 1px solid;
+    text-indent: 0;
+    list-style: none;
+    }
+    .draft:after,
+    .draft:before {
+        content: '' !important;
+        }
 /* /Cosmetic
 ---------------------------------------------------------------------------------- */
+
+
+/* Common slide
+---------------------------------------------------------------------------------- */
+
+.decor {
+    background-image: url(../i/desktopfirst.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    visibility: visible !important;
+    z-index: auto !important;
+    }
+
+    .decor.active {
+        position: relative !important;
+        }
+        /*.decor.active:after {*/
+            /*content: "OBEY";*/
+            /*position: absolute;*/
+            /*top: 57px;*/
+            /*right: 123px;*/
+
+            /*-webkit-transform: rotate(-90deg);*/
+            /*transform: rotate(-90deg);*/
+            /*font-size: .95em;*/
+            /*}*/
+
+    .decor_obey {
+        position: absolute;
+        top: 20px;
+        left: 595px;
+        width: 110px;
+        display: none;
+        }
+        .decor.active .decor_obey {
+            display: block;
+            }
+
+    .decor_arrow {
+        position: absolute;
+        top: 100px;
+        left: 365px;
+        }
+        .decor_arrow:last-child {
+            left: 565px;
+            }
+
+        .decor.active .decor_arrow {
+            -webkit-animation: RotateMe 1s ease forwards;
+            animation: RotateMe 1s ease forwards;
+            }
+
+@-webkit-keyframes RotateMe {
+    0% {
+        -webkit-transform: rotate(0deg);
+        }
+    100% {
+        -webkit-transform: rotate(-180deg);
+        }
+    }
+
+
+/* /Common slide
+---------------------------------------------------------------------------------- */
+
