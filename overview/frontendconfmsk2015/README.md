@@ -148,6 +148,22 @@ _Сергей Рубанов (Exante Limited)_
 
 > Всегда ставтье на JavaScript! (с) B.Eik
  
+### **[Browser Fingerprint - анонимная идентификация браузеров](http://frontendconf.ru/2015/abstracts/1716)**
+_Валентин Васильев_
+
+Один из интереснейших докладов о том, как определить юзера без cookiesс вероятностью 90~95%
+
+- Скандал с порнохабом ;)
+- Evercookie:
+    - HTTP Cookie
+    - Flash (local shared objects)
+    - Canvas-generated cached IMG (RGB)
+    - Web History
+    - Session Storage   
+    - Local Storage
+    - Global Storage
+    - HTML5 Database storages
+  
 ### **[HTML5 Web Components: следующий шаг к модульности вашего проекта](http://frontendconf.ru/2015/abstracts/1762)**
 _Андрей Рахманов (Enaza)_    
 
@@ -162,7 +178,6 @@ _Андрей Рахманов (Enaza)_
 - http://webcomponents.org
 - http://component.kitchen
 
- 
 ### **[HTML GL - возьмите столько FPS, сколько вам нужно, и немного эффектов впридачу](http://frontendconf.ru/2015/abstracts/1737)**
 _Денис Радин_     
 - Простая инициализация через html-gl
@@ -171,6 +186,10 @@ _Денис Радин_
 - Рендеринг на WebGL, 20 000 зайцев
 - Как мешает встроенная эврестика
 - Есть ограничения html2canvas (например на инпутах)
+
+### **[Alasql.js - SQL база данных на JavaScript](http://frontendconf.ru/2015/abstracts/1713)**
+_Андрей Гершун_ 
+Реализация SQL на JS.
 
 ## **Презентации из докладов с параллельного потока**
 - [Отладка кода в браузере by Антон Шувалов](http://www.slideshare.net/ssuser92c928/ss-48511656)
