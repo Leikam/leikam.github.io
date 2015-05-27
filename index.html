@@ -2,177 +2,166 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<title>Обзоры конференций</title>
+		<title>leikam.github.io</title>
 		<style>
-			/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
+			@import "../../css/normalize.css";
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
+body{
+	margin: 0 auto;
+	background-color:white;
+
+	/*	--------- FONT FAMILY --------
+		 following are some optional font families. Usually a family
+		is safer to choose than a specific font,
+		which may not be on the users computer		*/
+	font-family:Georgia, Palatino, serif;
+/    font-family:"Book Antiqua", Palatino, serif;
+/    font-family:Arial, Helvetica, sans-serif;
+/    font-family:Tahoma, Verdana, Geneva, sans-serif;
+/    font-family:Courier, monospace;
+/    font-family:"Times New Roman", Times, serif;
+
+	/*	-------------- COLOR OPTIONS ------------
+		 following are additional color options for base font
+		you could uncomment another one to easily change the base color
+		or add one to a specific element style below         */
+	color: #333333; /* dark gray not black */
+/    color: #000000; /* black */
+/    color: #666666; /* medium gray  black */
+/    color: #E3E3E3; /* very light gray */
+/    color: white;
+
 	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-sup {
-   vertical-align: super;
-   font-size: smaller;
-}
+/    max-width: 960px;
+	max-width: 800px;
+	font-size: 18px;
+	}
 
-sub {
-  vertical-align: sub;
-  font-size: smaller;
-}
 
-/* Generic styles */
-body {
-	background: #f5f5f5;
-  color: #222;
-  font-family: 'Palatino Linotype','Book Antiqua',Palatino,FreeSerif,serif;
-  font-size: 16px;
-  margin: 0;
-  padding: 0;
-}
+p   {
+/    font-size: 22px;
+	line-height: 150%;
+/    max-width: 540px;
+	max-width: 960px;
+	font-weight: 400;
+	color: #333333
+	}
 
-h1, h2, h3, h4, h5, h6,
-ul, ol,
-p,
-code, pre,
-hr {
-	line-height: 1.5em;
-	margin: 1.5em 0 0.5em 0;
-}
 
-*:first-child {
-	margin-top: 0;
-}
+h1, h2, h3, h4 {
+/    color: #111111;
+	font-weight: 400;
+	}
 
-/* Headers */
-h1, h2, h3, h4, h5, h6 {
-	font-weight: bold;
-}
+h2, h3, h4, h5, p {
+	margin-bottom: 25px;
+	padding: 0;
+	}
 
 h1 {
-	font-size: 3.5em;
-}
+	margin-bottom: 10px;
+	font-size:300%;
+	padding: 0px;
+	font-variant:small-caps;
+	}
 
 h2 {
-	font-size: 2.5em;
-}
+	font-size:150%
+/    margin: 24px 0 6px;
+	}
 
 h3 {
-	font-size: 2em;
-}
-
+	font-size:120%
+	}
 h4 {
-	font-size: 1.5em
-}
+	font-size:100%
+font-variant:small-caps;
 
+	}
 h5 {
-	font-size: 1.2em;
-}
+	font-size:80%
+font-weight: 100;
+	}
 
 h6 {
-	font-size: 1em;
-}
-
-/* Lists */
-ul, ol {
-	padding-left: 2em;
-}
-
-ul {
-	list-style-type: disc;	
-}
-
-ol {
-	list-style-type: decimal;
-}
-
-/* Code and pre */
-code, pre {
-	font-family: "Bitstream Vera Sans Mono", "Courier", monospace;
-}
-code {
-	background: none repeat scroll 0 0 #F8F8FF;
-  border: 1px solid #DEDEDE;
-  border-radius: 3px 	;
-  padding: 0 0.2em;
-}
-pre {
-	border-left: 5px solid #eee;
-	margin-left: 2em;	
-	padding-left: 1em;
-}
-pre > code {
-	background: transparent;
-	border: none;
-	padding: 0;
-}
-
-/* Links */
+	font-size:80%
+font-weight: 100;
+	color:red;
+	font-variant:small-caps;
+	}
 a {
-  color: #261A3B;
-}
-
+	color: grey;
+	margin: 0;
+	padding: 0;
+	vertical-align: baseline;
+	}
+a:hover {
+	text-decoration: blink;
+	color: green;
+	}
 a:visited {
-  color: #261A3B;
-}
+	color: black;
+	}
+ul, ol {
+	padding: 0;
+	margin: 0px 0px 0px 50px;
+	}
+ul {
+	list-style-type: square;
+	list-style-position: inside;
 
-/* Inlines */
-strong {
-	font-weight: bold;
-}
+	}
 
-em {
-	font-style: italic;
-}
+li {
+	line-height:150%
+	}
+li ul, li ul {
+	margin-left: 24px;
+	}
 
-/* Container */
-.container {
-	background: #FFF;
-	padding: 30px 50px;
-	margin: 0 auto;
-	width: 850px;
-}
+pre {
+	padding: 0px 24px;
+	max-width: 800px;
+	white-space: pre-wrap;
+	}
+code {
+	font-family: Consolas, Monaco, Andale Mono, monospace;
+	line-height: 1.5;
+	font-size: 13px;
+	}
+aside {
+	display: block;
+	float: right;
+	width: 390px;
+	}
+blockquote {
+	border-left:.5em solid #eee;
+	padding: 0 1em;
+	margin-left:0;
+	max-width: 476px;
+	}
+blockquote  cite {
+/   font-size:14px;
+	line-height:20px;
+	color:#bfbfbf;
+	}
+blockquote cite:before {
+	content: '\2014 \00A0';
+	}
+
+blockquote p {
+	color: #666;
+	max-width: 460px;
+	}
+hr {
+/    width: 540px;
+	text-align: left;
+	margin: 0 auto 0 0;
+	color: #999;
+	}
+
+
+
 
 		</style>
 	</head>
@@ -180,6 +169,8 @@ em {
 		<div class="container">
 			<h2 id="-">Обзоры конференций</h2>
 <p><a href="/overview/frontendconfmsk2015">FrontendConf 2015, Москва</a></p>
+<h2 id="-">Доклады</h2>
+<p><a href="/pres/mobiles">Мобильный веб</a></p>
 
 		</div>
 
