@@ -2,198 +2,331 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<title>FrontendConf 2015, Москва</title>
+		<title>leikam.github.io</title>
 		<style>
-			/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
+			@import "../../css/normalize.css";
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
+body{
+	margin: 0 auto;
+	background-color:white;
+
+	/*	--------- FONT FAMILY --------
+		 following are some optional font families. Usually a family
+		is safer to choose than a specific font,
+		which may not be on the users computer		*/
+	font-family:Georgia, Palatino, serif;
+/    font-family:"Book Antiqua", Palatino, serif;
+/    font-family:Arial, Helvetica, sans-serif;
+/    font-family:Tahoma, Verdana, Geneva, sans-serif;
+/    font-family:Courier, monospace;
+/    font-family:"Times New Roman", Times, serif;
+
+	/*	-------------- COLOR OPTIONS ------------
+		 following are additional color options for base font
+		you could uncomment another one to easily change the base color
+		or add one to a specific element style below         */
+	color: #333333; /* dark gray not black */
+/    color: #000000; /* black */
+/    color: #666666; /* medium gray  black */
+/    color: #E3E3E3; /* very light gray */
+/    color: white;
+
 	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-sup {
-   vertical-align: super;
-   font-size: smaller;
-}
+/    max-width: 960px;
+	max-width: 800px;
+	font-size: 18px;
+	}
 
-sub {
-  vertical-align: sub;
-  font-size: smaller;
-}
 
-/* Generic styles */
-body {
-	background: #f5f5f5;
-  color: #222;
-  font-family: 'Palatino Linotype','Book Antiqua',Palatino,FreeSerif,serif;
-  font-size: 16px;
-  margin: 0;
-  padding: 0;
-}
+p   {
+/    font-size: 22px;
+	line-height: 150%;
+/    max-width: 540px;
+	max-width: 960px;
+	font-weight: 400;
+	color: #333333
+	}
 
-h1, h2, h3, h4, h5, h6,
-ul, ol,
-p,
-code, pre,
-hr {
-	line-height: 1.5em;
-	margin: 1.5em 0 0.5em 0;
-}
 
-*:first-child {
-	margin-top: 0;
-}
+h1, h2, h3, h4 {
+/    color: #111111;
+	font-weight: 400;
+	}
 
-/* Headers */
-h1, h2, h3, h4, h5, h6 {
-	font-weight: bold;
-}
+h2, h3, h4, h5, p {
+	margin-bottom: 25px;
+	padding: 0;
+	}
 
 h1 {
-	font-size: 3.5em;
-}
+	margin-bottom: 10px;
+	font-size:300%;
+	padding: 0px;
+	font-variant:small-caps;
+	}
 
 h2 {
-	font-size: 2.5em;
-}
+	font-size:150%
+/    margin: 24px 0 6px;
+	}
 
 h3 {
-	font-size: 2em;
-}
-
+	font-size:120%
+	}
 h4 {
-	font-size: 1.5em
-}
+	font-size:100%
+font-variant:small-caps;
 
+	}
 h5 {
-	font-size: 1.2em;
-}
+	font-size:80%
+font-weight: 100;
+	}
 
 h6 {
-	font-size: 1em;
-}
-
-/* Lists */
-ul, ol {
-	padding-left: 2em;
-}
-
-ul {
-	list-style-type: disc;	
-}
-
-ol {
-	list-style-type: decimal;
-}
-
-/* Code and pre */
-code, pre {
-	font-family: "Bitstream Vera Sans Mono", "Courier", monospace;
-}
-code {
-	background: none repeat scroll 0 0 #F8F8FF;
-  border: 1px solid #DEDEDE;
-  border-radius: 3px 	;
-  padding: 0 0.2em;
-}
-pre {
-	border-left: 5px solid #eee;
-	margin-left: 2em;	
-	padding-left: 1em;
-}
-pre > code {
-	background: transparent;
-	border: none;
-	padding: 0;
-}
-
-/* Links */
+	font-size:80%
+font-weight: 100;
+	color:red;
+	font-variant:small-caps;
+	}
 a {
-  color: #261A3B;
-}
-
+	color: grey;
+	margin: 0;
+	padding: 0;
+	vertical-align: baseline;
+	}
+a:hover {
+	text-decoration: blink;
+	color: green;
+	}
 a:visited {
-  color: #261A3B;
-}
+	color: black;
+	}
+ul, ol {
+	padding: 0;
+	margin: 0px 0px 0px 50px;
+	}
+ul {
+	list-style-type: square;
+	list-style-position: inside;
 
-/* Inlines */
-strong {
-	font-weight: bold;
-}
+	}
 
-em {
-	font-style: italic;
-}
+li {
+	line-height:150%
+	}
+li ul, li ul {
+	margin-left: 24px;
+	}
 
-/* Container */
-.container {
-	background: #FFF;
-	padding: 30px 50px;
-	margin: 0 auto;
-	width: 850px;
-}
+pre {
+	padding: 0px 24px;
+	max-width: 800px;
+	white-space: pre-wrap;
+	}
+code {
+	font-family: Consolas, Monaco, Andale Mono, monospace;
+	line-height: 1.5;
+	font-size: 13px;
+	}
+aside {
+	display: block;
+	float: right;
+	width: 390px;
+	}
+blockquote {
+	border-left:.5em solid #eee;
+	padding: 0 1em;
+	margin-left:0;
+	max-width: 476px;
+	}
+blockquote  cite {
+/   font-size:14px;
+	line-height:20px;
+	color:#bfbfbf;
+	}
+blockquote cite:before {
+	content: '\2014 \00A0';
+	}
+
+blockquote p {
+	color: #666;
+	max-width: 460px;
+	}
+hr {
+/    width: 540px;
+	text-align: left;
+	margin: 0 auto 0 0;
+	color: #999;
+	}
+
+
+
 
 		</style>
 	</head>
 	<body>
 		<div class="container">
 			<h1 id="frontendconf-2015-">FrontendConf 2015, Москва</h1>
-<p><a href="http://frontendconf.ru/2015/schedule.html">http://frontendconf.ru/2015/schedule.html</a></p>
-<h2 id="-">Лента твитов:</h2>
-<p><a href="https://twitter.com/search?q=%23frontconfmsk">https://twitter.com/search?q=%23frontconfmsk</a></p>
-<h2 id="-">Главные тезисы:</h2>
 <ul>
-<li>будущее JS (наверное и CSS, но я пропустил)</li>
+<li><a href="http://frontendconf.ru/2015/schedule.html">Список докладов</a></li>
+<li><a href="https://twitter.com/search?q=%23frontconfmsk">Лента твитов</a></li>
+</ul>
+<h2 id="-">Основные тезисы:</h2>
+<ul>
+<li>будущее JS (наверное про будущее CSS тоже было, но я эту ветку я пропустил)</li>
 <li>сборщики</li>
 <li>шаблонизаторы</li>
-<li>MV* фреймворки
--</li>
+<li>MV* фреймворки</li>
 </ul>
-<p>Много хайпа вокруг CoffeeScript, кажется, разлюбили. Лучшая цитата:
-Кофескрипт имеет плюсы и минусы: плюсы – он позволяет не ставить точку с запятой,
+<p>Много хайпа вокруг CoffeeScript, его, кажется, разлюбили.<br>Цитата:</p>
+<blockquote>
+<p>Кофескрипт имеет плюсы и минусы: плюсы – он позволяет не ставить точку с запятой,
 минусы – список из 8 пунктов.</p>
+</blockquote>
+<p>Зато теперь все любят новый ES6+ и радостно используют компиляторы.
+Несколько тезисов с конференции:</p>
+<blockquote>
 <p>TypeScript самый мощный и самый популярный способ типизировать JS.</p>
+</blockquote>
+<p>В то же время Babel поддерживает больше фич, но не типизацию.</p>
+<h2 id="-">Доклады</h2>
+<h3 id="-http-frontendconf-ru-2015-abstracts-1741-"><strong><a href="http://frontendconf.ru/2015/abstracts/1741">Функциональное программирование</a></strong></h3>
+<ul>
+<li>Иммутабельность и чистые функции == легие тесты</li>
+<li>Мммутабельные коллеции</li>
+<li>Пример из React</li>
+<li>(!) Прокрутка кода с изменением входящих данных и промоткой по истории назад</li>
+</ul>
+<h3 id="-"><strong>Статистика</strong></h3>
+<h4 id="-http-frontendconf-ru-2015-abstracts-1777-"><a href="http://frontendconf.ru/2015/abstracts/1777">Реалтайм статистика скорости работы нативных и веб-приложений у реальных пользователей</a></h4>
+<p>Павел Довбуш (Badoo)  </p>
+<ul>
+<li>Performance Timing API -  все метрики</li>
+<li>Ни гугл ни Яндекс не подошли</li>
+<li><a href="http://tiny.css/Jinba">http://tiny.css/Jinba</a></li>
+</ul>
+<p>..и ту же тему продолжает:</p>
+<h4 id="-http-frontendconf-ru-2015-abstracts-1772-"><a href="http://frontendconf.ru/2015/abstracts/1772">Глубокая аналитика скорости сайта</a></h4>
+<p>Николай Мациевский  </p>
+<p>Сгруппированные данные о времени загурзки:</p>
+<ul>
+<li>по типам файлов</li>
+<li>по рефереру</li>
+<li>по типу оптимизации</li>
+<li>..и другое.</li>
+</ul>
+<h3 id="-http-frontendconf-ru-2015-abstracts-1724-"><strong><a href="http://frontendconf.ru/2015/abstracts/1724">Пакуйте чемоданы. Грузите апельсины</a></strong></h3>
+<p>Владимир Кузнецов (Graph)<br><a href="http://mistakster.github.io/frontendconf-2015/?full#1">Cлайды</a></p>
+<ul>
+<li>Рассказ о сборщиков, звезды - webpack &amp; browserify</li>
+<li>Концеции в фокусе: CommonJS, AMD, UMD, ES7</li>
+</ul>
+<h3 id="-frontend-http-frontendconf-ru-2015-abstracts-1769-"><strong><a href="http://frontendconf.ru/2015/abstracts/1769">(Не)безопасный frontend</a></strong></h3>
+<p>Сергей Белов<br><a href="http://www.slideshare.net/sergeybelove/frontend-48484878">Слайды</a></p>
+<ul>
+<li>CSP (content security policy) - позволяет ограничить пути поставки ерсурсов</li>
+<li>Популярная уязвимость через сборку Adobe Flex</li>
+<li>Как утекают токены через загружаемые картинки, еслив гетах есть какая-то информация</li>
+</ul>
+<h3 id="-http-frontendconf-ru-2015-abstracts-1771-"><strong><a href="http://frontendconf.ru/2015/abstracts/1771">Как перестать отлаживать асинхронный код и начать жить</a></strong></h3>
+<p>Андрей Саломатин (Productive Mobile)<br><a href="http://www.slideshare.net/moscowjs/ss-47134995">Слайды</a></p>
+<ul>
+<li>Callback</li>
+<li>Promises (медленные)</li>
+<li>Coroutines</li>
+</ul>
+<p>Нативное будущее:</p>
+<ul>
+<li>Async/Await</li>
+<li>Async Generators</li>
+</ul>
+<h3 id="-web-http-frontendconf-ru-2015-abstracts-1718-"><strong><a href="http://frontendconf.ru/2015/abstracts/1718">Десктопные приложения на web технологиях</a></strong></h3>
+<p>Дмитрий Дудин<br><a href="html5.by/slides/mwjs">Слайды</a><br><a href="http://html5.by/blog/nwjs">Статья</a></p>
+<ul>
+<li>nw.js, electron</li>
+<li>структура приложения:<ul>
+<li>HTML, CSS, JS</li>
+<li>package.json</li>
+</ul>
+</li>
+<li>Возможность собрать десктопное приложение из готового API</li>
+<li>Широкие возможность применять методы длф fs</li>
+<li>Кроссплатформенность</li>
+<li>[Хакатонмод] Собрать морду для упраления проектом.</li>
+</ul>
+<h3 id="-dom-http-frontendconf-ru-2015-abstracts-1753-"><strong><a href="http://frontendconf.ru/2015/abstracts/1753">Быстрый ренеринг с DOM шаблонизаторами</a></strong></h3>
+<p>Борис Каплуновский  </p>
+<ul>
+<li>templ - собственный шаблонизатор</li>
+<li>под ударом – Angular, React</li>
+<li>Основные аргументы против вес, скорсоть работы, много замеров против</li>
+<li>Virtual DOM, глубокого стека и неоправданной сложности</li>
+</ul>
+<h3 id="-typescript-http-frontendconf-ru-2015-abstracts-1733-"><strong><a href="http://frontendconf.ru/2015/abstracts/1733">TypeScript: особенности разработки</a></strong></h3>
+<p>Александр Майоров (Tutu.ru)  </p>
+<ul>
+<li>JS compilers</li>
+<li>CoffeeScript</li>
+<li>TypeScript ~= ES6+<ul>
+<li>следит за типизацией, защита от ошибок</li>
+<li>мифы о TS</li>
+<li>хорошая поддержка у JetBrains</li>
+<li>TypeScript = Babel(он без типизации) + FLOW (by Facebook)</li>
+</ul>
+</li>
+<li>Разрущителилегенд-мод: вопрос про Babel vs TS обернулся не в сторону TypeScript</li>
+</ul>
+<h3 id="-javascript-http-frontendconf-ru-2015-abstracts-1722-"><strong><a href="http://frontendconf.ru/2015/abstracts/1722">JavaScript завтра</a></strong></h3>
+<p>Сергей Рубанов (Exante Limited)<br><a href="http://www.slideshare.net/SergeyRubanov/javascript-48352266">Слайды</a></p>
+<ul>
+<li>батхерт по CoffeScript</li>
+<li>Dart перестал разрабатывать вирт машину</li>
+<li>asm.js и гонка улучшений джаваскриптов</li>
+<li>AOT vs V8 JIT</li>
+<li>Новая нумерация версий</li>
+<li>Транскопиляторы (traceur, babel)<ul>
+<li>Статичесская типизация</li>
+<li>Встроенная типизация в JS VM: SoundScript, Sane Mode</li>
+<li>работает в Canary</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>Всегда ставтье на JavaScript (B. Eik)</p>
+</blockquote>
+<h3 id="-html5-web-components-http-frontendconf-ru-2015-abstracts-1762-"><strong><a href="http://frontendconf.ru/2015/abstracts/1762">HTML5 Web Components: следующий шаг к модульности вашего проекта</a></strong></h3>
+<p>Андрей Рахманов (Enaza)  </p>
+<ul>
+<li>поддержка WebComponents (tekmlates, custom elements, shadow dom, imports), workarounds</li>
+<li>Polyfills: native, bosonic,, x-tag, polymer</li>
+<li>Nodejs + browserify + gulp + jade + stylus</li>
+<li>Polymer Vulcanize для конкатенации импортов</li>
+</ul>
+<p>Все это вылтлось в технологический стек, который создает веб-компонент со всеми составляющими одной командой</p>
+<h4 id="-">Полезные ссылки</h4>
+<ul>
+<li><a href="http://webcomponents.org">http://webcomponents.org</a></li>
+<li><a href="http://component.kitchen">http://component.kitchen</a></li>
+</ul>
+<h3 id="-html-gl-fps-http-frontendconf-ru-2015-abstracts-1737-"><strong><a href="http://frontendconf.ru/2015/abstracts/1737">HTML GL - возьмите столько FPS, сколько вам нужно, и немного эффектов впридачу</a></strong></h3>
+<p>Денис Радин   </p>
+<ul>
+<li>Простая инициализация через html-gl</li>
+<li>~100 000 000 textured areas</li>
+<li>Пример с CryEngine</li>
+<li>Рендеринг на WebGL, 20 000 зайцев</li>
+<li>Как мешает встроенная эврестика</li>
+<li>Есть ограничения html2canvas (например на инпутах)</li>
+</ul>
+<h2 id="-"><strong>Презентации из докладов с параллельного потока</strong></h2>
+<ul>
+<li><a href="http://www.slideshare.net/ssuser92c928/ss-48511656">Отладка кода в браузере by Антон Шувалов</a></li>
+<li><a href="http://yoksel.github.io/text-may2015/#1">Оживляем текст by Юля Бухвалова</a></li>
+<li><a href="http://2gis.github.io/makeup/">Мейкап и контроль качества верстки by Тимофей Чаптыков</a></li>
+<li><a href="http://www.slideshare.net/awinogradov/ss-48422586">Компонентный веб, проникновение в дизайн by Антон Виноградов</a></li>
+<li><a href="http://ai.github.io/about-postcss/">PostCSS by Андрей Ситник</a></li>
+</ul>
 
 		</div>
 
