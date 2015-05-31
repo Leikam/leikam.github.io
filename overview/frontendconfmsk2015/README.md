@@ -1,0 +1,1 @@
+**Deprecated catalog**, should be redirected to './review/'

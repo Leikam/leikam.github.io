@@ -7,4 +7,4 @@
 [Мобильный веб](/pres/mobiles/?full#cover)
 
 ## Обзоры конференций
-[FrontendConf 2015, Москва](/overview/frontendconfmsk2015)
+[FrontendConf 2015, Москва](/review/frontendconfmsk2015)
