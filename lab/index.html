@@ -7,10 +7,25 @@
 <body>
 <script>
     (function () {
-        var txt = document.createElement("SPAN");
-        txt.style.fontSize = '50px';
-        txt.appendChild(document.createTextNode("devicePixelRatio: "+ window.devicePixelRatio));
-        document.body.appendChild(txt);
+        var textWrapper = document.createElement("SPAN"),
+            fragment = document.createDocumentFragment(),
+            text,
+            data;
+
+        textWrapper.style.fontSize = '30px';
+
+        data = {
+            devicePixelRatio: window.devicePixelRatio,
+            userAgent: window.navigator.userAgent
+        };
+
+        for (k in data) {
+            text = document.createTextNode(k + ": " + data[k] + ";");
+            fragment.appendChild(text);
+            fragment.appendChild(document.createElement("HR"));
+        }
+        textWrapper.appendChild(fragment);
+        document.body.appendChild(textWrapper);
     })();
 </script>
 
