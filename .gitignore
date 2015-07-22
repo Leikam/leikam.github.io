@@ -1,5 +1,6 @@
 .iml
 .DS_Store
-help.txt
-./node_modules
-build.sh
+.sh
+/node_modules
+test
+*.sh
