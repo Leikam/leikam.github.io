@@ -3,4 +3,5 @@
 .sh
 /node_modules
 test
+/.idea
 *.sh
