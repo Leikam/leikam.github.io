@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Особенноси мобильной разработки</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=1024, user-scalable=no">
+    <link rel="stylesheet" href="res/shower-ok/styles/screen.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bender.css">
+
+    <style>
+        /* temporary */
+    </style>
+</head>
+<body class="list">
+
+
+<header class="caption">
+    <h1>Особенноси мобильной разработки</h1>
+    <p>Дмитрий Ляпунов</p>
+    <p>"Mobile Developers Latvia" Meetup, Рига, 2016</p>
+</header>
+
+
+<!-- 0. Заглушка -->
+<section class="slide cover">
+    <img src="i/cover.jpeg" alt=""/>
+</section>
+
+
+
+<!-- 1. Стартовый слайд -->
+<section class="slide cover" id="cover">
+    <div>
+        <h2 class="bold light">
+            <span class="blured">Особенности мобильной разработки</span>
+        </h2>
+        <div class="place b author">
+            <a class="author_tx" href='http://ok.ru/profile/552470924914'>Дмитрий Ляпунов</a>
+            <a href="http://v.ok.ru" class="ok">
+                <img class="uncover" src="res/shower-ok/images/ok-logo-or.svg" alt="одноклассники"></a>
+        </div>
+
+    </div>
+    <img src="i/cover.jpeg" alt=""/>
+    <!--<img src="i/poster.png" width="100%"/>-->
+</section>
+
+
+
+<!-- 2. О себе -->
+<section class="slide intro">
+    <div>
+        <h2>Я: <b>Дмитрий Ляпунов</b></h2>
+
+        <ul>
+            <li>делаю мобильный фронтенд в <a href="http://ok.ru">ok.ru</a></li>
+            <li>для open-source: <a href="https://github.com/sourcejs/Source">SourceJS</a>, Devshelf (†)</li>
+            <li>CoffeeScript не люблю, а про jQuery еще поговорим</li>
+        </ul>
+
+        <div class="ok-logo next"></div>
+    </div>
+</section>
+
+
+<!-- Общее -->
+<section class="slide cover">
+    <div>
+        <h2 class="invert">Мобильный фронтенд?</h2>
+        <!-- была моя первая реакция, когда меня отправили в мобильную команду, но потом ничего, втянулся -->
+        <img class="place" src="i/world2.gif" alt="Strange world" height="500" style="right: 0"/>
+    </div>
+</section>
+<!-- Общее -->
+<section class="slide cover h">
+    <div>
+        <img src="i/fragmentation.png" alt=""/>
+    </div>
+</section>
+<!-- Общее -->
+<section class="slide shout cover h">
+    <div>
+        <h2>Этот странный мобильный мир</h2>
+        <img src="i/fragmentation.png" alt="" style="opacity: .25"/>
+    </div>
+</section>
+<!-- Общее -->
+<section class="slide common">
+    <div>
+        <h2>~/Общее</h2>
+        <ul>
+            <li>
+                Этот странный мобильный мир
+                <!--“сейчас допишу пару media queries" и все отныне будет хорошо-->
+            </li>
+            <li class="next no-pseudo">
+                <!--<a href="index.html">Mobile first</<a>-->
+                    <!-- grap_mobile_vs_pc.jpg -->
+                    <!-- наш график юзеров моб-десктоп.jpg -->
+                <!-- Fixed vs (Liquid(%) + Responsive(@media + %) + Adaptive(@media + px) + combo)-->
+                    <!--TODO: картинки оь этом: http://frontender.info/adaptive-vs-responsive-terminology/ -->
+                <!-- GD в JS & PE в CSS -->
+                <!-- серебрянной пули нет - надо смешивать -->
+                <!-- доступность контента с любым коннектом -->
+                <br/>
+                <div class="decor next">
+                    <div class="decor_arrow-w">
+                        <img style="visibility: hidden" src="i/desktopfirst.png" alt=""/>
+                        <img class="decor_obey" src="i/obey.jpg" alt=""/>
+                        <img class="decor_arrow" src="i/arrow.png" alt="arrow"/>
+                        <img class="decor_arrow" src="i/arrow.png" alt="arrow"/>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+<section class="slide">
+    <div>
+        <h2>~/Общее</h2>
+        <ul>
+            <li>
+                Этот странный мобильный мир
+            </li>
+            <li>
+                <a href="index.html?full#9">Mobile first</a>
+            </li>
+        </ul>
+    </div>
+</section>
+<section class="slide cover h">
+    <div class="">
+        <img class="full" width="800" src="i/graph_mobile_vs_pc.png"/>
+    </div>
+    <div class="next">
+        <img class="full" width="800" src="i/mobilesVsPC.jpg"/>
+        <!-- рынок вырос на 2000% раз, десктоп на 30% упал -->
+    </div>
+    <div class="next">
+        <img class="full" width="800" src="i/WEB_MOB.png"/>
+        <img src="i/topsecret.png" style="width: 400px;height: auto;top: 60%;left: 80%;">
+    </div>
+</section>
+<section class="slide">
+    <div>
+        <h2>~/Общее/MobileFirst</h2>
+        <img src="i/rwd/fixed-static-layout.png" alt="" width="64%" style="position: absolute;"/>
+        <img class="next" src="i/rwd/liquid-layout.png" width="64%" style="position: absolute; z-index: 1"/>
+        <img class="next" src="i/rwd/adaptive-layout.png" width="64%" style="position: absolute; z-index: 2"/>
+        <img class="next" src="i/rwd/responsive-layout.png" width="64%" style="position: absolute; z-index: 3"/>
+        <a href="http://frontender.info/adaptive-vs-responsive-terminology/" style="
+            position: absolute;
+            bottom:15%;
+            font-size:20px;
+            line-height: 1.2;
+        ">
+            frontender.info/adaptive-vs-responsive-terminology/
+        </a>
+    </div>
+</section>
+<section class="slide">
+    <div>
+        <h2>~/Общее</h2>
+        <ul>
+            <li>
+                Этот странный, странный мобильный мир
+            </li>
+            <li>
+                <a href="index.html?full#9">Mobile first</a>
+            </li>
+            <li>
+                Физиологические особенности
+                <!-- неудобно пользоваться: в автобусе, смс на светофоре (признайтесь вы тоже так делаете), под дождем -->
+                <!--<li>близкое расположение экрана и разный тип позиционирования: портретный, альбомный</li>-->
+                <!--<li>непредсказуемый размер области отображения</li>-->
+                <!--<li>жизнь без мышки, ховера и клавиатуы – жесты: -start, -end, -move, -enter, -leave и целый набор Touch Gestures by Microsoft;</li>-->
+                <br/><img class="next gif" src="i/gestures.gif" alt="gestures"/>
+            </li>
+        </ul>
+    </div>
+</section>
+<section class="slide">
+    <div>
+        <h2>~/Общее</h2>
+        <ul>
+            <li>
+                Этот странный, странный мобильный мир
+            </li>
+            <li>
+                <a href="index.html?full#9">Mobile first</a>
+            </li>
+            <li>
+                Физиологические особенности
+            </li>
+            <li>
+                browser ≠ webView
+                <!--<li>не может использовать проприетарные технологии, ускорители</li>-->
+                <!--<li>отличается поддержка стандартов</li>-->
+                <!--<li>сложнее дебажить</li>-->
+            </li>
+            <li class='next'>
+                Загадочная <span class="lp">(..медленная!)</span> сеть
+                <!-- усталые гномики переносят пакеты -->
+                <!-- slow start, редиректы, 404+, много внешних ресурсов -->
+            </li>
+        </ul>
+    </div>
+</section>
+
+
+
+<section class="slide __slow">
+    <div>
+        <h2>~/Общее</h2>
+        <img src="i/img004.GIF" alt="" width="49.5%"/>
+        <img src="i/img005.GIF" alt="" width="49.5%"/>
+    </div>
+</section>
+
+
+<!-- вёрстка -->
+<!-- а кто сидит между программистом и дизайнером? -->
+<!--Графика-->
+<section class="slide h cover">
+    <div>
+        <img src="i/don_markup.jpg" alt=""/>
+        <!--<li>data-uri может быть в 6+ раз медленнее, чем ссылка на ресурс</li>-->
+        <!--<li>SVG - до 100-150px</li>-->
+        <!--<li>canvas?..</li> -->
+        <!--<li>Браузерное масштабирование нагибает</li>-->
+        <!--todo: Больше canvas-->
+    </div>
+</section>
+<section class="slide shout h cover">
+    <div>
+        <h2 class="">.вёрстка</h2>
+        <img src="i/don_markup.jpg" alt="" style="opacity: .25;"/>
+    </div>
+</section>
+<!-- Верстка: GPU -->
+<section class="slide">
+    <div>
+        <h2>.вёрстка[<span class="lp">GPU + CPU</span>]</h2>
+        <ul>
+            <li>Дешевые CSS-анимации: <code>transform</code> и <code>opacity</code></li>
+        </ul>
+    </div>
+</section>
+<section class="slide">
+    <div>
+        <!--<h2>.вёрстка[<span class="lp">GPU + CPU</span>]</h2>-->
+        <img src="i/animate-height-2x.png" alt="" class="place"/>
+        <span class="custom_elem1">vs</span>
+        <img src="i/animate-transform-2x.png" alt="" class="place"/>
+        <!-- почему хорошо инспользовать дешевые анимации -->
+        <style>
+            .custom_elem1 {
+                font-size: 3em;
+                position: absolute;
+                top: 40%;
+                left: 49%;
+                }
+
+            [src='i/animate-height-2x.png'],
+            [src='i/animate-transform-2x.png'] {
+                top: 45% !important;
+                width: 30% !important;
+                -webkit-transform: translateY(-50%) !important;
+                transform: translateY(-50%) !important;
+                }
+
+            [src='i/animate-transform-2x.png'] {
+                -webkit-transform: translate(50%, -50%) !important;
+                transform: translate(170%, -50%) !important;
+                }
+        </style>
+
+    </div>
+</section>
+<section class="slide">
+    <div>
+        <h2>.вёрстка[<span class="lp">GPU + CPU</span>]</h2>
+        <ul class="fz-ld">
+            <li>Дешевые CSS-анимации: <code>transform</code> <span class="lp">(scale, translate, rotate)</span>, <code>opacity</code></li>
+            <li>Размер отрисовки <a href="http://www.w3.org/TR/mobile-bp/#bpgroupplayout">имеет значение</a></li>
+        </ul>
+    </div>
+</section>
+<section class="slide">
+    <div>
+        <h2>.вёрстка[<span class="lp">GPU + CPU</span>]</h2>
+        <!--<li>Слабый, в сравнении с дестопами, ограничен в энерго-ресурсах и памяти,</li>-->
+        <!--<li>Угроза переполнения и без того небольшого объема памяти</li>-->
+
+        <ul>
+            <li>Размер отрисовки <a href="http://www.w3.org/TR/mobile-bp/#bpgroupplayout">имеет значение</a></li>
+        </ul>
+        <figure style="font-size: .8em">
+            <blockquote>
+                <p>If pages are too big they may take an unduly long time to load. In addition, mobile devices typically have restrictions on the largest page
+                   they can accommodate.</p>
+            </blockquote>
+            <figcaption><a href="http://www.w3.org/TR/mobile-bp/#bpgroupplayout">W3C - Mobile Web Best Practices 1.0</a></figcaption>
+        </figure>
+    </div>
+</section>
+<section class="slide">
+    <div>
+        <h2>.вёрстка[<span class="lp">GPU + CPU</span>]</h2>
+        <ul class="fz-ld">
+            <li>Дешевые CSS-анимации: <code>transform</code> <span class="lp">(scale, translate, rotate)</span>, <code>opacity</code></li>
+            <li>Размер отрисовки <a href="http://www.w3.org/TR/mobile-bp/#bpgroupplayout">имеет значение</a>
+                <span class="lp">(<span class="stroke-out">text-indent: -9999px</span>)
+                </span>
+            </li>
+            <li class="next">Контексты рендеринга <span class="lp">(fixed, translateZ, will-change)</span></li>
+            <!--<li>разное сглаживание у картинок</li>-->
+            <!--<li>translate3d(0), не бесконечны</li>-->
+            <!-- <li>баги с прорисовкой слоев</li> -->
+        </ul>
+    </div>
+</section>
+
+
+
+<!-- Верстка: Графика -->
+<section class="slide">
+    <div>
+        <h2>.вёрстка[<span class="lp">графика</span>]</h2>
+        <ul>
+            <li><a href="http://www.mobify.com/blog/data-uris-are-slow-on-mobile/">data-uri <span
+                    class="next">в 6+ раз медленнее, чем ссылка на ресурс</span></a></li>
+        </ul>
+        <img src="i/datauri.jpg" height="300" alt=""/>
+    </div>
+</section>
+<!-- Верстка: base64 -->
+<section class="slide cover h">
+    <div>
+        <img src="i/datauri.jpg" width="800" alt=""/>
+    </div>
+</section>
+<!-- Верстка -->
+<section class="slide clean">
+    <div>
+        <h2>.вёрстка[<span class="lp">графика</span>]</h2>
+        <ul>
+            <li><span class="lp">обновление:</span> <a href="http://www.mobify.com/blog/data-uris-are-slow-on-mobile/">data-uri <span>в 2-3 раза медленнее, чем ссылка</span></a></li>
+            <li>но у нас есть <a href="http://csssprites.org/">sprites</a>, canvas, svg, <a href="http://en.wikipedia.org/wiki/Emoji">emoji</a>, иконочные
+                шрифты, webp..<span class="next">и конечно же <a href="http://cssdeck.com/labs/dancing-robot-with-reflection">CSS магия</a></span><br/>
+                <img class="next" src="i/magick1.gif"/>
+                <div class="next" style="width: 360px; height: 220px; margin-left: -5px; transform: translateY(-100%); background-color: #fff"></div>
+            <!--- настройка урвоня доступа к шрифтам может решить проблему для винфона-->
+            </li>
+        </ul>
+        <div id="goMagick" class="next">
+            <div class="bender">
+                <div id="page">
+                    <div id="container">
+
+                        <div id="foot" class="left">
+                            <div id="f1"></div>
+                            <div id="f2"></div>
+
+
+                            <div id="leg1" class="first">
+                                <div id="leg1" class="next1">
+                                    <div id="leg1" class="next1">
+                                        <div id="leg1" class="next1">
+                                            <div id="leg1" class="next1"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="foot" class="right">
+                            <div id="f1"></div>
+                            <div id="f2"></div>
+
+                            <div id="leg2" class="first">
+                                <div id="leg2" class="next2">
+                                    <div id="leg2" class="next2">
+                                        <div id="leg2" class="next2">
+                                            <div id="leg2" class="next2"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div id="body">
+                            <div id="b1"></div>
+                            <div id="b2"></div>
+                            <div id="b3"></div>
+                            <div id="head">
+                                <div id="h1"></div>
+                                <div id="h2"></div>
+                                <div id="h3"></div>
+                                <div id="h4"></div>
+                                <div id="h5"><span></span></div>
+                                <div id="eyes">
+                                    <div id="e">
+                                        <div id="e1">
+                                            <div id="eye"></div>
+                                            <span></span>
+                                        </div>
+                                        <div id="e2">
+                                            <div id="eye"></div>
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="mouth">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <div id="m1"></div>
+                                    <div id="m2"></div>
+                                </div>
+                            </div>
+
+                            <div id="b4"></div>
+                            <div id="b5">
+                                <div id="b51">
+                                    <div id="b51">
+                                        <div id="b51">
+                                            <div id="b51">
+                                                <div id="ab">
+                                                    <div id="a1"></div>
+                                                    <div id="a2"></div>
+                                                    <div id="a3" class="a31"></div>
+                                                    <div id="a3" class="a32"></div>
+                                                    <div id="a3" class="a33"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="b6"></div>
+                            <div id="b7">
+                                <div id="b71">
+                                    <div id="b71">
+                                        <div id="b71">
+                                            <div id="b71">
+                                                <div id="ac">
+                                                    <div id="a1"></div>
+                                                    <div id="a2"></div>
+                                                    <div id="a3" class="a31"></div>
+                                                    <div id="a3" class="a32"></div>
+                                                    <div id="a3" class="a33"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="b8">
+                                <span></span>
+                            </div>
+                            <div id="b9"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- CSS -->
+<!-- TODO: анимации, как в нативных -->
+<section class="slide">
+    <div>
+        <h2>.вёрстка[<span class="lp"> W3C <span class="lcoral">♥</span></span>]</h2>
+        <pre style="margin-bottom: 5px;">-webkit-tap-highlight-color</pre>
+        <img src="i/taps.jpg" alt="" style="height: 325px !important"/>
+    </div>
+</section>
+<section class="slide">
+    <div>
+        <img src="i/tap1.jpg" alt="" width="320" style="position: relative; top: -40px"/>
+        <img src="i/tap2.jpg" alt="" width="320" style="position: relative; top: -40px; right: -5%"/>
+    </div>
+</section>
+<section class="slide">
+    <div>
+        <h2>.вёрстка[<span class="lp"> W<span class="lcoral" style="font-size: 44px">♥</span>C </span>]</h2>
+        <ul>
+            <li>-webkit-tap-highlight-color</li>
+            <li>touch-action: manipulation <span class="lp">| pan-y | ...</span></li>
+            <!--<li>-webkit-touch-callout: none;</li>-->
+            <li class="next __semi">Правильные поля ввода</li>
+        </ul>
+    </div>
+</section>
+<section class="slide w">
+    <div>
+        <h2>.вёрстка[<span class="lp"> W<span class="lcoral" style="font-size: 44px">♥</span>C </span>]</h2>
+        <pre style="margin-bottom: 5px;">&lt;input type="<mark>email</mark>, <mark>url</mark>, <mark>password</mark>, <mark>number</mark>, <mark>date</mark>, ..."/&gt;</pre>
+        <!--TODO: http://www.w3schools.com/html/html_form_input_types.asp попробовать в реале-->
+        <img class="place w" src="i/inputs.png" alt="inputs" width="800"/>
+    </div>
+</section>
+<section class="slide">
+    <div>
+        <h2>.вёрстка[<span class="lp"> W<span class="lcoral" style="font-size: 44px">♥</span>C </span>]</h2>
+        <ul>
+            <li>-webkit-tap-highlight-color</li>
+            <li>touch-action: manipulation</li>
+
+            <!--<li>-webkit-touch-callout: none;</li>-->
+            <li>Правильные поля ввода</li>
+            <li>::-ms-expand, ::-moz-focus-inner, ::-webkit-scrollbar, <span class="lp">::bugfix</span></li>
+            <li class="next __semi">:active</li>
+            <li class="next __semi">:fullscreen</li>
+            <!--<li class="next __semi">outline: none !please;</li>-->
+        </ul>
+    </div>
+</section>
+<section class="slide">
+    <div>
+        <h2>.вёрстка[<span class="lp"> W<span class="lcoral" style="font-size: 44px">♥</span>C </span>]</h2>
+        <ul>
+            <li style="white-space: nowrap"><span>@media (<code>min-device-pixel-ratio: 2</code>) {...}</span><span class="next custom3">@media (<code>min-device-pixel-ratio: 1.5</code>){...}</span></li>
+            <li class="next __semi">-webkit-<code>overflow-scrolling: touch</code></li>
+            <li class="next __semi">&lt;a href='<code>sms:</code>29567811'>Send&lt;/a> <span class="lp">(facetime:, mailto:, tel:)</span></li>
+            <li class="next __semi">ARIA аттрибуты для экранных дикторов</li>
+        </ul>
+    </div>
+    <style>
+        .custom3 {
+            display: inline-block;
+            transform: translateX(-100%);
+            margin-left: 29px;
+            background-color: white;
+            }
+    </style>
+</section>
+
+
+<!-- JavaScript -->
+<!--TODO: задержка 300ms против 100 -->
+<!--TODO: возможность позлорадствовать: momentum scroll и другие технологии "нативного" приложения -->
+<section class="slide h cover" style="background-color: #2b2c26;">
+    <div>
+        <img src="i/js2.jpg" alt="" width="276" height="191"/>
+        <style>
+            [src="i/js2.jpg"] {
+                height: 191px !important;
+                }
+        </style>
+    </div>
+</section>
+<section class="slide shout h cover" style="background-color: #2b2c26;">
+    <div>
+        <h2 class="">{ Javascript }</h2>
+        <img src="i/js2.jpg" alt="" width="276" height="191" style="opacity: .5; "/>
+    </div>
+</section>
+<section class="slide">
+    <div>
+        <h2>{ Javascript: "Особый подход" }</h2>
+        <ul>
+            <li>Javascript любезен, пока не лезут в его DOM</li>
+            <!--не собирать данные DOM в итерацияя-->
+            <!--не собирать и вставлять стили вперемешку-->
+
+            <li class="next __semi">requestAnimationFrame(callback)</li>
+            <li class="next __semi">window.ontouch*</li>
+            <!-- audio/video API требуют тач-контекст -->
+            <li class="next __semi"><span class="stroke-out">Application cache</span> Service Workers</li>
+            <li class="next __semi">Инерционный скролл</li>
+            <li class="next __semi">Full-screen mode</li>
+        </ul>
+    </div>
+</section>
+<section class="slide">
+    <div>
+        <h2>{ Javascript: "Особый подход" }</h2>
+        <ul style="font-size: .8em">
+            <li>window.<code>scrollTo(0, 1);</code>
+                <br/><span class="lp">Andorid, iOS 6, <span class="stroke-out">iOS 7</span></span>
+            </li>
+            <li>&lt;meta name="viewport" content="width=device-width, ... , <code>minimal-ui</code>" />
+                <br/><span class="lp">iOS 7 <span class="stroke-out">iOS8</span></span>
+            </li>
+            <li>body.requestFullScreen();
+                <span class="lp">&nbsp;// хорошая попытка, mozilla!</span>
+            </li>
+            <li>прощай, jQuery</li>
+        </ul>
+    </div>
+</section>
+<section class="slide">
+    <div>
+        <h2>{ JavaScript: "API" }</h2>
+        <code style="font-size: 14px; margin: 0" class="em">https://www.w3.org/standards/techs/js#stds</code>
+        <iframe style="border:none" height="325px" width="650px" src="https://www.w3.org/standards/techs/js#stds" seamless="true"></iframe>
+    </div>
+</section>
+
+
+
+<!-- Battery -->
+<section class="slide">
+    <div>
+        <h2>// Оптимизация: батарейка</h2>
+        <ul>
+            <li>Темная тема рулит</li>
+            <li class="next">GPU более экономичный, чем CPU</li>
+            <li class="next">JPG потребляют ~20% меньше, чем PNG/GIF</li>
+            <li class="next">секономить 30%, избавившись от jQuery</li>
+                <!-- стоимость JS может сравняться со стоимостью рендеринга картинок-->
+                <!-- JS один из самых прожорливых компонек-->
+                <!-- jQuery обойдется в 4Дж ~ как скачать, распарсить и отрендерить 2-3 файла с CSS-->
+                <!-- Ajax-запросы ведут к большему потреблению из-за препятствия активации сетевого соединения и в запущенных случаях препятствию кешированию-->
+            <li class="next">удаленные вычисления</li>
+                <!-- OperaMini уже использует такой подход -->
+            <li class="next">не надо загружать файлы</li>
+        </ul>
+    </div>
+</section>
+
+
+<!-- Bugs -->
+<section class="slide h cover">
+    <div>
+        <img src="i/bugs.jpg" alt=""/>
+    </div>
+</section>
+<section class="slide shout h cover">
+    <div>
+        <h2>#Bugs</h2>
+        <img src="i/bugs.jpg" alt="" style="opacity: .25;"/>
+    </div>
+</section>
+<section class="slide">
+    <div>
+        <h2>#Bugs-001</h2>
+
+        <ul>
+            <li>Нативный UI
+                <!--<li>Браузер может закрывать своими UI часть страницы при загрузке, при этом иногда позволяя кликать (или не позволяя)</li>-->
+                <!--<li>Добавляем паддинг до onload</li>-->
+            </li>
+            <li class="next __semi">Touch events
+                <!-- touchstart имеет continuos-эффект - меняем элемент на тач, и новый элмент получает всю ту же любовь, что и старый -->
+                <!-- может блокироваться зонами иннерционного скролла -->
+                <!-- могут прерывать цепочку событий -->
+            </li>
+            <li class="next __semi">Шрифтовые иконки
+                <!--<li>имеют особенность пропадать, фиксится перезаливкой шрифта</li>-->
+            </li>
+            <li class="next __semi">Нетрививальные ссылки
+                <!--<li>overlink</li>-->
+                <!--<li><code>Node.onclick</code> не на <code>&lt;a&gt;</code></li>-->
+                <!--<li>добавить прозрачный фон</li>-->
+            </li>
+            <li class="next __semi">-webkit-overflow-scrolling: touch
+                <!-- ошибка при развороте экрана -->
+                <!-- мерцание экрана -->
+                <!-- "изящное" решение проблемы в ios8 -->
+            </li>
+            <li class="next __semi">Вёрстка, :checked и unicode</li>
+        </ul>
+    </div>
+</section>
+<section class="slide cover h">
+    <div>
+        <h2 class="invert">CSS магия возвращается</h2>
+        <img src="i/git.png" alt="" style="height:400px !important"/>
+    </div>
+</section>
+<section class="slide">
+    <div>
+        <h2>#Bugs-002</h2>
+        <ul>
+            <li>Неявные сабмиты форм</li>
+            <!-- согласно W3C первая submit в форме будет обозначена таковой -->
+            <li class="next __semi">Необщительный псевдо-селектор
+                <img src="i/pseudo.png">
+            </li>
+            <li class="next __semi">Андроид тоже уметь :checked <img style="vertical-align: middle" src="i/ANDROID-ikonka.png" width="60"/></li>
+        </ul>
+    </div>
+</section>
+<section class="slide">
+    <div>
+        <h2>#Bugs-003</h2>
+        <ul>
+            <li>защите от pull-to-refresh</li>
+            <li class="next">анимируем без остановки</li>
+            <li class="next">это никогда не кончится..
+            <br/><img src="i/neverends.gif">
+            </li>
+        </ul>
+    </div>
+</section>
+
+
+
+<!-- Инспектирвоание -->
+<section class="slide cover h">
+    <div>
+        <h2 class="invert">> Отладка</h2>
+        <img src="i/iphone.gif" alt=""/>
+    </div>
+</section>
+<!-- Chrome DevTools -->
+<section class="slide">
+    <div>
+        <h2>> Отладка</h2>
+        <ul>
+            <li>Chrome Developer Tools</li>
+        </ul>
+        <img src="i/devtools.jpg" alt="devtools" width="49.5%"/>
+        <img src="i/chrome_devtool.jpg" alt="devtools" width="49.5%"/>
+        <style>
+            [src='i/devtools.jpg'],
+            [src='i/chrome_devtool.jpg'] {
+                vertical-align: top;
+                }
+        </style>
+    </div>
+</section>
+<section class="slide cover white">
+    <div>
+        <img class="" src="i/devtools.jpg" alt="chrome dev tools"/>
+    </div>
+</section>
+<section class="slide cover white">
+    <div>
+        <img class="" src="i/chrome_devtool.jpg" alt="chrome dev tools" width="100%"/>
+    </div>
+</section>
+<!-- Weinre -->
+<section class="slide">
+    <div>
+        <h2>> Отладка</h2>
+        <ul>
+            <li><a href="http://people.apache.org/~pmuellr/weinre/docs/latest/Home.html">Weinre</a></li>
+        </ul>
+    </div>
+</section>
+<section class="slide">
+    <div>
+        <h2>> Отладка</h2>
+        <pre style="font-size: .9em">
+        <code>$> npm i -g <mark>weinre</mark></code>
+        <code>$> weinre <mark>httpPort</mark> 3333 <mark>boundHost</mark> 127.0.0.1</code>
+    </pre>
+        <img src="i/weinre1.jpg" alt="Weinre" height="280" style="margin-top: -35px"/>
+    </div>
+</section>
+<section class="slide cover">
+    <div>
+        <img src="i/weinre1.jpg" alt="Weinre" width="1024"/>
+    </div>
+</section>
+<!-- Испектирование: Summary -->
+<section class="slide">
+    <div>
+        <h2>> Отладка</h2>
+        <ul>
+            <li>Chrome Developer Tools</li>
+            <li><a href="http://people.apache.org/~pmuellr/weinre/docs/latest/Home.html">Weinre</a> + <span class="lp">browser-sync</span></li>
+            <li>XCode + Safari<span class="lp">>Develop</span></li>
+            <li class="next __semi">Android SDK</li>
+            <li class="next __semi">MS Edge + VirtualBox <span class="lp">или Windows Phone SDK + VisualStudio</span></li>
+        </ul>
+    </div>
+</section>
+
+
+<section class="slide">
+    <div>
+        <h2>Всем WHATWG! (:</h2>
+        <div class="fz-l">Дмитрий Ляпунов</div>
+        <ul>
+            <li><a class="fz-l" href="http://twitter.com/lapynow">@lapynow</a></li>
+            <li><a class="fz-l" href="mailto:lapynow.d@gmail.com">lapynow.d@gmail.com</a></li>
+            <li><a class="fz-l" href="https://github.com/Leikam">GitHub me</a></li>
+        </ul>
+
+        <p style="margin-top: 1em;">Слайды презентации — <a href="http://leikam.github.io/pres-mobiles">leikam.github.io</a></p>
+        <!--<code>git clone https://....</code>-->
+    </div>
+</section>
+
+<div class="progress">
+    <div></div>
+</div>
+<script src="res/shower-core/shower.min.js"></script>
+<script src="js/custom.js"></script>
+
+<!-- Powered by Shower presentation engine - Copyright © 2010–2013 Vadim Makeev — pepelsbey.net -->
+</body>
+</html>
