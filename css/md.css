@@ -1,10 +1,4 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8" />
-		<title>leikam.github.io</title>
-		<style>
-			@import "../../css/normalize.css";
+@import "../../css/normalize.css";
 
 body{
 	margin: 0 auto;
@@ -162,24 +156,3 @@ hr {
 
 
 
-
-		</style>
-	</head>
-	<body>
-		<div class="container">
-			<h1 id="-">Доклады</h1>
-<h2 id="-">Избранные</h2>
-<p><a href="https://patrickhlauke.github.io/getting-touchy-presentation/">Getting touchy by Patrickh Lauke</a></p>
-<h2 id="-">Мои</h2>
-<p><a href="/pres/mobiles/?full#cover">Мобильный веб</a></p>
-<h2 id="-">Обзоры конференций</h2>
-<ul>
-<li><a href="/review/frontendconfmsk2015">FrontendConf 2015, Москва</a>    </li>
-<li><a href="/review/fronttalks-ekburg-2015">FrontTalks 2015, Екатеринбург</a></li>
-</ul>
-
-		</div>
-
-		<script></script>
-	</body>
-</html>

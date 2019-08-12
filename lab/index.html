@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Tests</title>
+</head>
+<body>
+<script>
+    (function () {
+        var textWrapper = document.createElement("SPAN"),
+            fragment = document.createDocumentFragment(),
+            text,
+            data;
+
+        textWrapper.style.fontSize = '30px';
+
+        data = {
+            devicePixelRatio: window.devicePixelRatio,
+            userAgent: window.navigator.userAgent
+        };
+
+        for (k in data) {
+            text = document.createTextNode(k + ": " + data[k] + ";");
+            fragment.appendChild(text);
+            fragment.appendChild(document.createElement("HR"));
+        }
+        textWrapper.appendChild(fragment);
+        document.body.appendChild(textWrapper);
+    })();
+</script>
+
+</body>
+</html>

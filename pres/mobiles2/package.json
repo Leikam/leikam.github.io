@@ -1,0 +1,22 @@
+{
+  "name": "pres-mobiles",
+  "version": "0.1.0",
+  "description": "Slides about mobile frontent develeopment (RU).",
+  "main": "Gruntfile.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Leikam/mobiles.git"
+  },
+  "keywords": [
+    "presentation",
+    "shower",
+    "slides"
+  ],
+  "dependencies": {
+    "shower-core": "git://github.com/operatino/core",
+    "shower-video": "git://github.com/operatino/shower-video#v0.0.3",
+    "shower-ok": "git://github.com/operatino/shower-ok"
+  },
+  "author": "Dmitry Lapynow",
+  "readmeFilename": "README.md"
+}
